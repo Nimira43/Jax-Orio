@@ -1,5 +1,5 @@
 # Jax-Orio
-3D hack and slash game using Godot. Jax Orio, a drunken Knight must protect his village of Stonemarsh from invading Orcs and Trolls!
+3D hack and slash game using Godot. Jax Orio, a drunken former Knight, must protect his village of Stonemarsh from invading Orcs and Trolls!
 
 ## The Leaping Deer Inn in Stonemarsh, a small village in Medieval England...
 
@@ -9,8 +9,8 @@
 #### "Erm Sir Boli is off crusading idiot," said Nerys the Cook, "and Michel Ironfist naw'z chief armourer with a platoon of Knights!!!" 
 #### "Erick Goldenbeard!!!" cooed Mary the Baker dreamily. 
 #### "E's off training the King's Royal Archers Mary," said Nerys sighing.
-#### "Ow'z 'bout Orio?" said Fred the Butcher. Howls of laughter explode in the Inn. 
-#### "Orio? 'e cannie walk straight looook, " said Buxom Betty, the barmaid. 
+#### "Ow'z 'bout Orio?" said Fred the Butcher. Howls of laughter exploded in the Inn. 
+#### "Orio? 'E cannie walk straight looook, " said Buxom Betty, the barmaid. 
 #### Heads turned to look at Jax Orio staggering to the bar. "Weasshal Sshtout Betsy...." said Orio before going unconscious.........
 #### As the laughter intensified through the Leaping Deer Inn, the door suddenly burst open, letting in a gust of wind and rain. Everyone turned to see a young boy, drenched and breathless, standing in the doorway.
 #### "The Orcs! They're at the gates of Stonemarsh!" he cried, his voice trembling with fear.
