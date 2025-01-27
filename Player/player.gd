@@ -12,6 +12,7 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _physics_process(delta: float) -> void:
+	frame_camera_rotation()
 
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -39,3 +40,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event is InputEventMouseMotion:
 			_look = -event.relative * mouse_sensitivity
 			print(_look)
+
+func frame_camera_rotation() -> void:
+	$SpringArm3D.rotate_y(_look.x)
+	_look = Vector2.ZERO
