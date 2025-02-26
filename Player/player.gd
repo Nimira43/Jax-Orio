@@ -45,5 +45,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			print(_look)
 
 func frame_camera_rotation() -> void:
+	horizontal_pivot.rotate_y(_look.x)
+	vertical_pivot.rotate_x(_look.y)
 	$SpringArm3D.global_transform = vertical_pivot.global_transform
 	_look = Vector2.ZERO
