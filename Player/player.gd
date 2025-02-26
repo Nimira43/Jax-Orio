@@ -6,8 +6,10 @@ const JUMP_VELOCITY = 4.5
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var _look := Vector2.ZERO
+
 @export var mouse_sensitivity: float = 0.00075
 @onready var horizontal_pivot: Node3D = $HorizontalPivot
+@onready var vertical_pivot: Node3D = $HorizontalPivot/VerticalPivot
 
 
 func _ready() -> void:
