@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -56,5 +55,4 @@ func frame_camera_rotation() -> void:
 		deg_to_rad(max_boundary)
 		)
 	
-	$SpringArm3D.global_transform = vertical_pivot.global_transform
 	_look = Vector2.ZERO
