@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dputcl55hc4na"]
+[gd_scene load_steps=7 format=3 uid="uid://dputcl55hc4na"]
 
 [ext_resource type="PackedScene" uid="uid://dqhkrihfol8u8" path="res://Player/player.tscn" id="1_qbj3a"]
+[ext_resource type="PackedScene" uid="uid://c5ent4agdu7f5" path="res://Assets/3D_Assets/Environment/Rock_Cliff_Env_03.glb" id="2_glqtg"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s80o8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -15,6 +16,9 @@ sky = SubResource("Sky_yohan")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1y88"]
+albedo_color = Color(0.321569, 0.317647, 0.117647, 1)
+
 [node name="Level" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -24,10 +28,49 @@ environment = SubResource("Environment_kcvba")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
 size = Vector3(50, 1, 50)
+material = SubResource("StandardMaterial3D_i1y88")
 
 [node name="Player" parent="." instance=ExtResource("1_qbj3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MapBoundary" type="Node3D" parent="."]
+
+[node name="RockWall" parent="MapBoundary" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.580146, 2.17957, -23.3475)
+
+[node name="Rock_Cliff_Env_033" parent="MapBoundary/RockWall" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6025, -0.0940132, 0.461857)
+
+[node name="Rock_Cliff_Env_034" parent="MapBoundary/RockWall" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7769, 0.301427, 0.303459)
+
+[node name="RockWall2" parent="MapBoundary" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.580146, 2.17957, 27.6723)
+
+[node name="Rock_Cliff_Env_033" parent="MapBoundary/RockWall2" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6025, -0.0940132, 0.461857)
+
+[node name="Rock_Cliff_Env_034" parent="MapBoundary/RockWall2" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7769, 0.301427, 0.303459)
+
+[node name="RockWall3" parent="MapBoundary" instance=ExtResource("2_glqtg")]
+transform = Transform3D(-0.0139447, 0, -0.999903, 0, 1, 0, 0.999903, 0, -0.0139447, -27.8509, 2.27721, -1.90731)
+
+[node name="Rock_Cliff_Env_033" parent="MapBoundary/RockWall3" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6025, -0.0940132, 0.461857)
+
+[node name="Rock_Cliff_Env_034" parent="MapBoundary/RockWall3" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7769, 0.301427, 0.303459)
+
+[node name="RockWall4" parent="MapBoundary" instance=ExtResource("2_glqtg")]
+transform = Transform3D(-0.0139447, 0, -0.999903, 0, 1, 0, 0.999903, 0, -0.0139447, 23.9609, 2.27721, -1.90731)
+
+[node name="Rock_Cliff_Env_033" parent="MapBoundary/RockWall4" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6025, -0.0940132, 0.461857)
+
+[node name="Rock_Cliff_Env_034" parent="MapBoundary/RockWall4" instance=ExtResource("2_glqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7769, 0.301427, 0.303459)
