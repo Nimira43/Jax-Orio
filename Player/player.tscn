@@ -19,11 +19,12 @@ shape = SubResource("CapsuleShape3D_wa12n")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_aryht")
 
-[node name="SmoothCameraArm" type="SpringArm3D" parent="."]
+[node name="SmoothCameraArm" type="SpringArm3D" parent="." node_paths=PackedStringArray("target")]
 transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0)
 shape = SubResource("SeparationRayShape3D_hdav1")
 spring_length = 4.0
 script = ExtResource("2_jt83h")
+target = NodePath("../HorizontalPivot/VerticalPivot")
 
 [node name="Camera3D" type="Camera3D" parent="SmoothCameraArm"]
 
