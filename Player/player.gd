@@ -11,7 +11,6 @@ var _look := Vector2.ZERO
 @onready var horizontal_pivot: Node3D = $HorizontalPivot
 @onready var vertical_pivot: Node3D = $HorizontalPivot/VerticalPivot
 
-
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -46,5 +45,5 @@ func _unhandled_input(event: InputEvent) -> void:
 			print(_look)
 
 func frame_camera_rotation() -> void:
-	$SpringArm3D.rotate_y(_look.x)
+	$SpringArm3D.global_transform = vertical_pivot.global_transform
 	_look = Vector2.ZERO
