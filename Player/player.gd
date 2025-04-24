@@ -30,6 +30,7 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		look_toward_direction(direction, delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -60,4 +61,8 @@ func frame_camera_rotation() -> void:
 	
 	_look = Vector2.ZERO
 
-func look_forward_direction(direction: Vector3, delta: Float) 
+func look_toward_direction(direction: Vector3, delta: float) -> void:
+	var target_transform := rig_pivot.global_transform.looking_at(
+		rig_pivot.global_position + direction, Vector3.UP, true 	
+	) 
+	rig_pivot.global_transform.basis = target_transform.basis
