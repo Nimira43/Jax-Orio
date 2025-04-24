@@ -59,3 +59,5 @@ func frame_camera_rotation() -> void:
 		)
 	
 	_look = Vector2.ZERO
+
+func look_forward_direction(direction: Vector3, delta: Float) 
