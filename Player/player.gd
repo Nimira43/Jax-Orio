@@ -68,5 +68,5 @@ func look_toward_direction(direction: Vector3, delta: float) -> void:
 	) 
 	rig_pivot.global_transform = rig_pivot.global_transform.interpolate_with(
 		target_transform,
-		0.1
+		1.0 - exp(-animation_decay * delta)
 	)
