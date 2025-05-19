@@ -65,4 +65,7 @@ func look_toward_direction(direction: Vector3, delta: float) -> void:
 	var target_transform := rig_pivot.global_transform.looking_at(
 		rig_pivot.global_position + direction, Vector3.UP, true 	
 	) 
-	rig_pivot.global_transform.basis = target_transform.basis
+	rig_pivot.global_transform = rig_pivot.global_transform.interpolate_with(
+		target_transform,
+		0.1
+	)
