@@ -6,6 +6,6 @@ var run_weight_target := -1.0
 
 func update_animation_tree(direction: Vector3) -> void:
 	if direction.is_zero_approx():
-		animation_tree[run_path] = -1.0
+		run_weight_target = -1.0
 	else:
-		animation_tree[run_path] = 1.0
+		run_weight_target = 1.0
