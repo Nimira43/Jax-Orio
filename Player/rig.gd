@@ -3,6 +3,8 @@ extends Node3D
 @export var animation_speed: float = 10.0
 
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var playback: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
+
 var run_path: String = "parameters/MoveSpace/blend_position"
 var run_weight_target := -1.0
 
