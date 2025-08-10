@@ -20,3 +20,8 @@ func update_animation_tree(direction: Vector3) -> void:
 		run_weight_target = -1.0
 	else:
 		run_weight_target = 1.0
+		
+func travel(animation_name: String) -> void:
+	playback.travel(animation_name)
+	
+
