@@ -46,6 +46,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		if event is InputEventMouseMotion:
 			_look = -event.relative * mouse_sensitivity
+	if rig.is_idle():
+		if event.is_action_pressed("click"):
+			slash_attack()
 
 func get_movement_direction() -> Vector3:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
@@ -72,3 +75,6 @@ func look_toward_direction(direction: Vector3, delta: float) -> void:
 		target_transform,
 		1.0 - exp(-animation_decay * delta)
 	)
+	
+func slash_attack() -> void:
+	rig.travel("Slash")
