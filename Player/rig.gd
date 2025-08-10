@@ -24,4 +24,5 @@ func update_animation_tree(direction: Vector3) -> void:
 func travel(animation_name: String) -> void:
 	playback.travel(animation_name)
 	
-
+func is_idle() -> bool:
+	return playback.get_current_node() == "MoveSpace"
