@@ -79,3 +79,7 @@ func look_toward_direction(direction: Vector3, delta: float) -> void:
 	
 func slash_attack() -> void:
 	rig.travel("Slash")
+	_attack_direction = get_movement_direction()
+	
+	if _attack_direction.is_zero_approx():
+		_attack_direction = rig.global_basis * Vector3(0, 0, 1)
