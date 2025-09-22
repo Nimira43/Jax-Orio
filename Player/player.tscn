@@ -11,6 +11,10 @@ length = 4.0
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_o5c6n")
+mouse_sensitivity = null
+min_boundary = null
+max_boundary = null
+animation_decay = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_wa12n")

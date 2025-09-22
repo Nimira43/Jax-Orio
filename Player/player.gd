@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+	handle_slashing_physics_frame(delta)
 	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -85,4 +85,6 @@ func slash_attack() -> void:
 		_attack_direction = rig.global_basis * Vector3(0, 0, 1)
 		
 func handle_slashing_physics_frame(delta: float) -> void: 
-	pass
+	if not rig.is_slashing():
+		return
+	velocity.x = _attack_direction.x * attack_move_speed
