@@ -5,6 +5,7 @@ const JUMP_VELOCITY = 4.5
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var _look := Vector2.ZERO
+var _attack_direction := Vector3.ZERO
 
 @export var mouse_sensitivity: float = 0.00075
 @export var min_boundary: float = -60
