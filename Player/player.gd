@@ -89,3 +89,5 @@ func handle_slashing_physics_frame(delta: float) -> void:
 	if not rig.is_slashing():
 		return
 	velocity.x = _attack_direction.x * attack_move_speed
+	velocity.z = _attack_direction.z * attack_move_speed
+	look_toward_direction(_attack_direction, delta)
