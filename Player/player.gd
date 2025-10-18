@@ -32,13 +32,7 @@ func _physics_process(delta: float) -> void:
 
 	var direction := get_movement_direction()
 	rig.update_animation_tree(direction)
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-		look_toward_direction(direction, delta)
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+	
 	handle_slashing_physics_frame(delta)
 	move_and_slide()
 
@@ -88,7 +82,13 @@ func slash_attack() -> void:
 func handle_idle_physics_frame(delta: float, direction: Vector3) -> void:
 	if not rig.is_idle():
 		return		
-	pass
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+		look_toward_direction(direction, delta)
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
 		
 func handle_slashing_physics_frame(delta: float) -> void: 
 	if not rig.is_slashing():
