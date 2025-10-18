@@ -88,6 +88,7 @@ func slash_attack() -> void:
 func handle_idle_physics_frame(delta: float, direction: Vector3) -> void:
 	if not rig.is_idle():
 		return		
+	pass
 		
 func handle_slashing_physics_frame(delta: float) -> void: 
 	if not rig.is_slashing():
