@@ -27,9 +27,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
 	var direction := get_movement_direction()
 	rig.update_animation_tree(direction)
 	handle_idle_physics_frame(delta, direction)

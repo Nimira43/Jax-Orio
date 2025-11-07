@@ -213,7 +213,7 @@ anim_player = NodePath("../CharacterRig/AnimationPlayer")
 parameters/MoveSpace/blend_position = 0
 
 [node name="RightHandBone" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-0.971753, -0.195051, -0.132857, 0.105797, -0.863259, 0.49355, -0.210957, 0.465553, 0.85951, -0.282831, 0.942901, 0.0290153)
+transform = Transform3D(-0.971753, -0.195053, -0.132856, 0.105798, -0.863259, 0.49355, -0.210958, 0.465553, 0.85951, -0.29451, 0.954287, 0.0641809)
 bone_name = "DEF-hand.R"
 bone_idx = 51
 use_external_skeleton = true
@@ -225,7 +225,7 @@ transform = Transform3D(-7.45058e-09, 5.21541e-08, 1, 0.996196, 0.0871562, -3.72
 [node name="Longsword" parent="RightHandBone/WeaponSlot" instance=ExtResource("3_bevq3")]
 
 [node name="LeftHandBone" type="BoneAttachment3D" parent="."]
-transform = Transform3D(-0.916483, -0.399963, 0.00943377, 0.240071, -0.530935, 0.812695, -0.320039, 0.747086, 0.582613, 0.265317, 1.00364, 0.173711)
+transform = Transform3D(-0.916482, -0.399964, 0.00943423, 0.240073, -0.530935, 0.812695, -0.32004, 0.747085, 0.582613, 0.253638, 1.01502, 0.208877)
 bone_name = "DEF-hand.L"
 bone_idx = 26
 use_external_skeleton = true
