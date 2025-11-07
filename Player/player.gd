@@ -23,15 +23,14 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	frame_camera_rotation()
-
-	if not is_on_floor():
-		velocity.y -= gravity * delta
-
 	var direction := get_movement_direction()
 	rig.update_animation_tree(direction)
 	handle_idle_physics_frame(delta, direction)
 	handle_slashing_physics_frame(delta)
 	move_and_slide()
+	
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
