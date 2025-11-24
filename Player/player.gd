@@ -27,10 +27,11 @@ func _physics_process(delta: float) -> void:
 	rig.update_animation_tree(direction)
 	handle_idle_physics_frame(delta, direction)
 	handle_slashing_physics_frame(delta)
-	move_and_slide()
 	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	
+	move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
