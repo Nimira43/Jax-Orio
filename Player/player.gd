@@ -17,6 +17,7 @@ var _attack_direction := Vector3.ZERO
 @onready var vertical_pivot: Node3D = $HorizontalPivot/VerticalPivot
 @onready var rig_pivot: Node3D = $RigPivot
 @onready var rig: Node3D = $RigPivot/Rig
+@onready var attack_cast: RayCast3D = %AttackCast
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
