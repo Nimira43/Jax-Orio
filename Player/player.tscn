@@ -32,3 +32,5 @@ target = NodePath("../HorizontalPivot/VerticalPivot")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Rig" parent="RigPivot" instance=ExtResource("3_nipy7")]
+
+[node name="RayAttachment" type="BoneAttachment3D" parent="RigPivot/Rig"]
