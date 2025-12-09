@@ -1,4 +1,5 @@
 extends RayCast3D
 
 func deal_damage() -> void:
-	pass
+	if not is_colliding():
+		return
