@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dputcl55hc4na"]
+[gd_scene load_steps=11 format=3 uid="uid://dputcl55hc4na"]
 
 [ext_resource type="PackedScene" uid="uid://dqhkrihfol8u8" path="res://Player/player.tscn" id="1_qbj3a"]
 [ext_resource type="PackedScene" uid="uid://c5ent4agdu7f5" path="res://Assets/3D_Assets/Environment/Rock_Cliff_Env_03.glb" id="2_glqtg"]
 [ext_resource type="PackedScene" uid="uid://ctmbnt7rbbi77" path="res://Assets/3D_Assets/Environment/Topiary_Tree_Vege_01.glb" id="3_dibw2"]
 [ext_resource type="PackedScene" uid="uid://cqpjypvh3uj0a" path="res://Assets/3D_Assets/Environment/Bush_Vege_2.glb" id="4_fc4kn"]
 [ext_resource type="PackedScene" uid="uid://qsn52otuuewi" path="res://Assets/3D_Assets/Environment/Tree_Group_Vege.glb" id="5_kqf4s"]
+[ext_resource type="PackedScene" uid="uid://dxkhwecohk1th" path="res://Enemy/enemy.tscn" id="6_4kcfe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s80o8"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -177,3 +178,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.79634, -0.878029, 5.90022)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.56644, -0.846359, -9.30225)
 
 [node name="Enemies" type="Node3D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("6_4kcfe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.00974, 0.216777)
