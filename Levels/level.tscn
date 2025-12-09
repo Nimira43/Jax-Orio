@@ -175,3 +175,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.79634, -0.878029, 5.90022)
 
 [node name="Tree_Group_Vege3" parent="Vegetation" instance=ExtResource("5_kqf4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.56644, -0.846359, -9.30225)
+
+[node name="Enemies" type="Node3D" parent="."]
