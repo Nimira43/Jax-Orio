@@ -76,6 +76,7 @@ func slash_attack() -> void:
 	
 	if _attack_direction.is_zero_approx():
 		_attack_direction = rig.global_basis * Vector3(0, 0, 1)
+	attack_cast.clear_exceptions()
 		
 func handle_idle_physics_frame(delta: float, direction: Vector3) -> void:
 	if not rig.is_idle():
