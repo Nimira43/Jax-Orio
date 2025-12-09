@@ -12,3 +12,4 @@ script = ExtResource("1_3xhht")
 shape = SubResource("CapsuleShape3D_a02m0")
 
 [node name="Rig" parent="." instance=ExtResource("2_q3ag2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
