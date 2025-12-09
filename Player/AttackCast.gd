@@ -6,3 +6,4 @@ func deal_damage() -> void:
 
 	var collider = get_collider()
 	print(collider)
+	add_exception(collider)
