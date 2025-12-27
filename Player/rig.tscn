@@ -40,7 +40,6 @@ graph_offset = Vector2(15, 11)
 
 [node name="Rig" type="Node3D"]
 script = ExtResource("1_y6m4h")
-animation_speed = null
 
 [node name="CharacterRig" parent="." instance=ExtResource("1_82rtq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0116785, -0.0113841, -0.0351659)

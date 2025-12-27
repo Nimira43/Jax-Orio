@@ -33,7 +33,6 @@ target = NodePath("../HorizontalPivot/VerticalPivot")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Rig" parent="RigPivot" instance=ExtResource("3_nipy7")]
-animation_speed = null
 
 [node name="Skeleton3D" parent="RigPivot/Rig/CharacterRig/GameRig" index="0"]
 bones/0/position = Vector3(0.0256648, 0.894804, -0.0197644)
