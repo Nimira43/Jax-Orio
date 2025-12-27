@@ -5,8 +5,10 @@ extends Node3D
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var playback: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
 @onready var skeleton_3d: Skeleton3D = $CharacterRig/GameRig/Skeleton3D
-@onready var villager_01: MeshInstance3D = $CharacterRig/GameRig/Skeleton3D/Villager_01
-@onready var villager_02: MeshInstance3D = $CharacterRig/GameRig/Skeleton3D/Villager_02
+@onready var villager_meshes: Array[MeshInstance3D] = [
+	$CharacterRig/GameRig/Skeleton3D/Villager_01,
+	$CharacterRig/GameRig/Skeleton3D/Villager_02
+]
 
 var run_path: String = "parameters/MoveSpace/blend_position"
 var run_weight_target := -1.0
