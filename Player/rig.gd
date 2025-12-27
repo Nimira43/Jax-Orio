@@ -35,5 +35,6 @@ func is_slashing() -> bool:
 func set_active_mesh(active_mesh: MeshInstance3D) -> void :
 	for child in skeleton_3d.get_child():
 		child.visible = false
+	active.mesh.visible = true
 
 
