@@ -8,3 +8,4 @@ func _physics_process(delta: float) -> void:
 		target.global_transform, 
 		1.0 - exp(-decay * delta)
 		)
+
