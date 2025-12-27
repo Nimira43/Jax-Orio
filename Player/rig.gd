@@ -4,6 +4,8 @@ extends Node3D
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var playback: AnimationNodeStateMachinePlayback = animation_tree["parameters/playback"]
+@onready var skeleton_3d: Skeleton3D = $CharacterRig/GameRig/Skeleton3D
+
 
 var run_path: String = "parameters/MoveSpace/blend_position"
 var run_weight_target := -1.0
@@ -29,3 +31,8 @@ func is_idle() -> bool:
 	
 func is_slashing() -> bool:
 	return playback.get_current_node() == "Slash"
+
+func set_active_mesh(active_mesh: MeshInstance3D) -> void :
+	pass  
+
+
