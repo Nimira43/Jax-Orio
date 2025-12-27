@@ -33,6 +33,7 @@ func is_slashing() -> bool:
 	return playback.get_current_node() == "Slash"
 
 func set_active_mesh(active_mesh: MeshInstance3D) -> void :
-	pass  
+	for child in skeleton_3d.get_child():
+		child.visible = false
 
 
