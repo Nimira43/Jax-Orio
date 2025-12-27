@@ -1,3 +1,8 @@
 extends CharacterBody3D
 
-@onready var enemy: CharacterBody3D = $Rig
+@onready var rig: Node3D = $Rig
+
+func _ready() -> void:
+	rig.set_action_mesh(
+		rig.villager_meshes.pick_random()
+	)
